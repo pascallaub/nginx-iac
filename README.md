@@ -192,10 +192,10 @@ docker rm nginx-updated-tf
 ## Problembehandlung
 
 ### Port bereits belegt
-Falls Port 8001 belegt ist, ändern Sie `external_port` in `variables.tf`:
+Falls Port 8080 belegt ist, ändern Sie `external_port` in `variables.tf`:
 ```hcl
 variable "external_port" {
-  default = 8002  # Anderen Port verwenden
+  default = 8081  # Anderen Port verwenden
 }
 ```
 
