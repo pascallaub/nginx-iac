@@ -67,8 +67,8 @@ terraform apply
 
 ### 6. Nginx testen
 Nach erfolgreichem Deployment:
-- Öffnen Sie http://localhost:8001
-- Oder testen Sie mit: `curl http://localhost:8001`
+- Öffnen Sie http://localhost:8080
+- Oder testen Sie mit: `curl http://localhost:8080`
 
 ### 7. Aufräumen
 ```bash
