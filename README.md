@@ -224,20 +224,6 @@ terraform init
 6. **Testen**: Container-Funktionalität prüfen
 7. **Committen**: Git-Commit erstellen
 
-## Herausforderungen und Lösungen
-
-### Provider-Konflikte
-**Problem**: Doppelte Provider-Konfigurationen  
-**Lösung**: Provider nur im Root-Modul definieren
-
-### Port-Konflikte
-**Problem**: Port 8000 bereits belegt  
-**Lösung**: Standard-Port auf 8001 geändert
-
-### Modul-Struktur
-**Problem**: Konsistente Modul-Organisation  
-**Lösung**: Klare Trennung von Root- und Modul-Konfiguration
-
 ## Nützliche Links
 
 - [Terraform Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest)
