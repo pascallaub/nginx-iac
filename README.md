@@ -4,7 +4,7 @@ Dieses Projekt erstellt eine Nginx-Container-Infrastruktur mit Terraform und Doc
 
 ## Übersicht
 
-Das Projekt nutzt Terraform, um einen Nginx-Container auf Port 8001 zu deployen. Es demonstriert verschiedene Terraform-Konzepte:
+Das Projekt nutzt Terraform, um einen Nginx-Container auf Port 8080 zu deployen. Es demonstriert verschiedene Terraform-Konzepte:
 
 - **Provider**: Kreuzwerker Docker Provider
 - **Module**: Wiederverwendbare Nginx-Container-Konfiguration
