@@ -94,7 +94,6 @@ terraform apply
 ### 7. Nginx testen
 
 Nach erfolgreichem Deployment:
-
 - Öffnen Sie http://localhost:8080
 - Oder testen Sie mit: `curl http://localhost:8080`
 
@@ -436,9 +435,7 @@ docker rm nginx-updated-tf
 ## Problembehandlung
 
 ### Port bereits belegt
-
-Falls Port 8080 belegt ist, ändern Sie `external_port` in [`variables.tf`](variables.tf):
-
+Falls Port 8080 belegt ist, ändern Sie `external_port` in `variables.tf`:
 ```hcl
 variable "external_port" {
   default = 8081  # Anderen Port verwenden
@@ -488,39 +485,7 @@ terraform init -reconfigure
 4. **Planen**: `terraform plan`
 5. **Anwenden**: `terraform apply`
 6. **Testen**: Container-Funktionalität prüfen
-7. **Committen**: Git-Commit erstellen (ohne [`backend.tf`](backend.tf)!)
-
-## Herausforderungen und Lösungen
-
-### Provider-Konflikte
-
-**Problem**: Doppelte Provider-Konfigurationen  
-**Lösung**: Provider nur im Root-Modul definieren
-
-### Port-Konflikte
-
-**Problem**: Port 8000 bereits belegt  
-**Lösung**: Standard-Port auf 8080 geändert
-
-### Modul-Struktur
-
-**Problem**: Konsistente Modul-Organisation  
-**Lösung**: Klare Trennung von Root- und Modul-Konfiguration
-
-### Remote State Setup
-
-**Problem**: Azure Storage Account Zugriff  
-**Lösung**: Access Keys verwenden statt Service Principal
-
-### State Migration
-
-**Problem**: Lokaler State zu Remote Backend  
-**Lösung**: `terraform init` erkennt Backend-Änderungen automatisch
-
-### Backend-Konfiguration
-
-**Problem**: Backend-Parameter nicht interpolierbar  
-**Lösung**: Nur statische Werte in Backend-Block verwenden
+7. **Committen**: Git-Commit erstellen
 
 ## Nützliche Links
 
