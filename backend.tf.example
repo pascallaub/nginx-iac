@@ -1,0 +1,9 @@
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "rg-terraform-state" 
+    storage_account_name = "blobvomob"
+    container_name       = "tfstate"
+    key                  = "nginx-iac.tfstate"
+    access_key          = "YOUR_ACCESS_KEY_HERE"
+  }
+}

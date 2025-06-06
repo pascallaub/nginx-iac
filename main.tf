@@ -12,9 +12,9 @@ provider "docker" {}
 
 module "nginx_container" {
   source = "./modules/nginx_container"
-
-  container_name = var.container_name
-  image_name     = var.image_name
-  internal_port  = local.internal_http_port
-  external_port  = var.external_port
+  
+  container_name  = var.container_name
+  image_name      = var.image_name
+  internal_port   = local.internal_http_port
+  external_port   = var.external_port
 }
